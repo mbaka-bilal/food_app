@@ -99,7 +99,8 @@ class CheckoutScreen extends StatelessWidget {
                                           // Text(e.value.totalAmount.toString()),
                                           Row(
                                             children: [
-                                              FaIcon(FontAwesomeIcons.nairaSign,
+                                              const FaIcon(
+                                                  FontAwesomeIcons.nairaSign,
                                                   color: Colors.black,
                                                   size: 12),
                                               Text(

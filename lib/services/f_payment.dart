@@ -3,10 +3,11 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_paystack/flutter_paystack.dart';
-import 'package:food_app/helpers/request_status.dart';
-import 'package:food_app/services/f_database.dart';
 
 import '../features/place_order/screens/congratulations_screen.dart';
+import '../helpers/request_status.dart';
+import '../services/f_database.dart';
+
 
 class FPayment extends ChangeNotifier {
   final _publicKey = 'pk_test_9974aed0c07b9bd7a7a5a85b2e9a5abf10982c76';
@@ -63,7 +64,7 @@ class FPayment extends ChangeNotifier {
     );
 
     if (checkOutResponse.status == true) {
-      print("running success function");
+      // print("running success function");
       successFunction();
     }
   }
@@ -98,7 +99,7 @@ class FPayment extends ChangeNotifier {
       _status = Status.failure;
       _errorText = 'No Network';
       notifyListeners();
-      print("Error paying with wallet $e");
+      // print("Error paying with wallet $e");
       // return Future.error();
     }
   }

@@ -167,7 +167,7 @@ class DashBoardScreen extends StatelessWidget {
                                         onChanged: (str) {
                                           // Provider.of<FDatabase>(context, listen: false).updateSearch(true,);
                                           if (str.isEmpty || str == "") {
-                                            print("empty");
+                                            // print("empty");
                                             context
                                                 .read<FDatabase>()
                                                 .updateSearch(false);
@@ -175,7 +175,7 @@ class DashBoardScreen extends StatelessWidget {
                                                 .read<FDatabase>()
                                                 .updateSearchString("");
                                           } else {
-                                            print("not empty");
+                                            // print("not empty");
                                             context
                                                 .read<FDatabase>()
                                                 .updateSearch(true);
@@ -283,7 +283,7 @@ class DashBoardScreen extends StatelessWidget {
 
                                     return GridView.builder(
                                         shrinkWrap: true,
-                                        physics: ScrollPhysics(),
+                                        physics: const ScrollPhysics(),
                                         gridDelegate:
                                             const SliverGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 2),

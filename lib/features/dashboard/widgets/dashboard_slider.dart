@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:food_app/utils/appstyles.dart';
 
 import '../../../utils/app_images.dart';
+import '../../../utils/appstyles.dart';
 
 class DashBoardSlider extends StatefulWidget {
   const DashBoardSlider({super.key});
@@ -51,7 +51,7 @@ class _DashBoardSliderState extends State<DashBoardSlider> {
           controller: _pageController,
           itemBuilder: ((context, index) {
             return Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

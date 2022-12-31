@@ -12,7 +12,7 @@ class MyWallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FPayment fPayment = FPayment();
-    var _formKey = GlobalKey<FormState>();
+    var formKey = GlobalKey<FormState>();
     String amount = "";
     TextEditingController amountController = TextEditingController();
 
@@ -97,7 +97,7 @@ class MyWallet extends StatelessWidget {
                                     builder: (context) {
                                       return AlertDialog(
                                         content: Form(
-                                          key: _formKey,
+                                          key: formKey,
                                           child: SizedBox(
                                             width: double.infinity,
                                             child: TextFormField(
@@ -122,7 +122,7 @@ class MyWallet extends StatelessWidget {
                                             buttonColor: AppColors.green,
                                             function: () async {
                                               // print("validating success");
-                                              if (!_formKey.currentState!
+                                              if (!formKey.currentState!
                                                   .validate()) {
                                                 return;
                                               }

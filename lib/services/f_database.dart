@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/services/cart.dart';
 import 'package:provider/provider.dart';
 
 import '../helpers/request_status.dart';
+import '../services/cart.dart';
+
 
 class FDatabase extends ChangeNotifier {
   final RequestStatus _requestStatus = RequestStatus(status: Status.loading);
@@ -50,7 +51,7 @@ class FDatabase extends ChangeNotifier {
       // print ("user info is ${userInfo.data()}");
       return userInfo.data();
     } catch (e) {
-      print("unable to fetch user info $e");
+      // print("unable to fetch user info $e");
       return Future.error({});
     }
   }
@@ -75,7 +76,7 @@ class FDatabase extends ChangeNotifier {
 
       return true;
     } catch (e) {
-      print("error uploading user info");
+      // print("error uploading user info");
       return false;
     }
   }
@@ -95,7 +96,7 @@ class FDatabase extends ChangeNotifier {
           .collection('orders')
           .add({'orders': foodIDs, 'date': Timestamp.fromDate(DateTime.now())});
     } catch (e) {
-      print("Error trying to upload purchase info ${e}");
+      // print("Error trying to upload purchase info ${e}");
     }
   }
 
@@ -114,7 +115,7 @@ class FDatabase extends ChangeNotifier {
           await _firebaseFirestore.collection('foods').doc(docID).get();
       return documentSnapShot.data() as Map<String, dynamic>;
     } catch (e) {
-      print("unable to fetch data $e");
+      // print("unable to fetch data $e");
       return Future.error({});
     }
   }
@@ -126,7 +127,7 @@ class FDatabase extends ChangeNotifier {
           .doc(FirebaseAuth.instance.currentUser!.uid)
           .update({'balance': newBalance});
     } catch (e) {
-      print("Error updating balance $e");
+      // print("Error updating balance $e");
     }
   }
 }

@@ -120,15 +120,17 @@ class PlaceOrderScreen extends StatelessWidget {
                                             style: TextStyles.semiBold(
                                                 20, AppColors.black),
                                           ),
-                                          FaIcon(FontAwesomeIcons.nairaSign,
-                                              color: Colors.black, size: 16),
+                                          const FaIcon(
+                                              FontAwesomeIcons.nairaSign,
+                                              color: Colors.black,
+                                              size: 16),
                                           Text('${data['balance']}',
                                               style: TextStyles.semiBold(
                                                   20, AppColors.black)),
                                         ],
                                       );
                                     } else {
-                                      return SizedBox(
+                                      return const SizedBox(
                                           width: 20,
                                           child: LinearProgressIndicator());
                                     }
@@ -173,8 +175,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                       ),
                                       Row(
                                         children: [
-                                          FaIcon(FontAwesomeIcons.nairaSign,
-                                              color: Colors.black, size: 15),
+                                          const FaIcon(
+                                              FontAwesomeIcons.nairaSign,
+                                              color: Colors.black,
+                                              size: 15),
                                           Text(
                                             '${context.read<Cart>().fetchTotalAmount()}',
                                             style: TextStyles.normal(
@@ -198,8 +202,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                       ),
                                       Row(
                                         children: [
-                                          FaIcon(FontAwesomeIcons.nairaSign,
-                                              color: Colors.black, size: 15),
+                                          const FaIcon(
+                                              FontAwesomeIcons.nairaSign,
+                                              color: Colors.black,
+                                              size: 15),
                                           Text(
                                             '500',
                                             style: TextStyles.normal(
@@ -223,8 +229,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                       ),
                                       Row(
                                         children: [
-                                          FaIcon(FontAwesomeIcons.nairaSign,
-                                              color: Colors.black, size: 15),
+                                          const FaIcon(
+                                              FontAwesomeIcons.nairaSign,
+                                              color: Colors.black,
+                                              size: 15),
                                           Text(
                                             '${(context.read<Cart>().fetchTotalAmount()) * 0.06}',
                                             style: TextStyles.normal(
@@ -251,8 +259,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                             (context, fCouponProvider, _) =>
                                                 Row(
                                           children: [
-                                            FaIcon(FontAwesomeIcons.nairaSign,
-                                                color: Colors.black, size: 15),
+                                            const FaIcon(
+                                                FontAwesomeIcons.nairaSign,
+                                                color: Colors.black,
+                                                size: 15),
                                             Text(
                                               '${fCouponProvider.fetchDiscount() * context.read<Cart>().fetchTotalAmount()}',
                                               style: TextStyles.normal(
@@ -280,8 +290,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                             (context, fCouponProvider, _) =>
                                                 Row(
                                           children: [
-                                            FaIcon(FontAwesomeIcons.nairaSign,
-                                                color: Colors.black, size: 15),
+                                            const FaIcon(
+                                                FontAwesomeIcons.nairaSign,
+                                                color: Colors.black,
+                                                size: 15),
                                             Text(
                                               '${(context.read<Cart>().fetchTotalAmount() + (context.read<Cart>().fetchTotalAmount() * 0.06) + 500) - fCouponProvider.fetchDiscount() * context.read<Cart>().fetchTotalAmount()}',
                                               style: TextStyles.normal(
@@ -362,8 +374,10 @@ class PlaceOrderScreen extends StatelessWidget {
                                           Text('Place Order - ',
                                               style: TextStyles.semiBold(
                                                   14, AppColors.black)),
-                                          FaIcon(FontAwesomeIcons.nairaSign,
-                                              color: Colors.black, size: 12),
+                                          const FaIcon(
+                                              FontAwesomeIcons.nairaSign,
+                                              color: Colors.black,
+                                              size: 12),
                                           Text(
                                               ' ${(context.read<Cart>().fetchTotalAmount() + (context.read<Cart>().fetchTotalAmount() * 0.06) + 500) - fCouponProvider.fetchDiscount() * context.read<Cart>().fetchTotalAmount()}',
                                               style: TextStyles.semiBold(
@@ -439,10 +453,8 @@ class PlaceOrderScreen extends StatelessWidget {
                                                   }
 
                                                   if (provider
-                                                      .paymentStatus() ==
-                                                      Status.success){
-
-                                                  }
+                                                          .paymentStatus() ==
+                                                      Status.success) {}
 
                                                   return Column(
                                                     mainAxisSize:

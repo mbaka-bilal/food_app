@@ -59,7 +59,7 @@ class FoodInfoCard extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        FaIcon(FontAwesomeIcons.nairaSign,
+                        const FaIcon(FontAwesomeIcons.nairaSign,
                             color: Colors.white, size: 12),
                         Text(
                           cost,

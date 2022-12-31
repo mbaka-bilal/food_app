@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/services/f_database.dart';
 
 import '../../../helpers/request_status.dart';
+import '../../../services/f_database.dart';
 import '../../../utils/appstyles.dart';
 import '../../../widgets/status_screen.dart';
 
@@ -138,7 +138,7 @@ class OrderInformation extends StatelessWidget {
                   } else if (snapshot.hasError) {
                     return Container();
                   } else {
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(
                         strokeWidth: 1,
                       ),

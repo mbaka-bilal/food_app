@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:food_app/features/onboarding/login/screens/login_screen.dart';
-import 'package:food_app/utils/app_images.dart';
-import 'package:food_app/utils/appstyles.dart';
-import 'package:food_app/utils/custom_route.dart';
-import 'package:food_app/widgets/custom_button.dart';
 
 import '../helpers/request_status.dart';
+
+import '../../../utils/app_images.dart';
+import './../../utils/appstyles.dart';
+import '../../../utils/custom_route.dart';
+import '../../../widgets/custom_button.dart';
 
 class StatusScreen extends StatelessWidget {
   const StatusScreen(

@@ -1,12 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/features/dashboard/screens/dashboard_screen.dart';
-import 'package:food_app/services/f_auth.dart';
 
+import '../../features/dashboard/screens/dashboard_screen.dart';
 import '../../features/onboarding/login/screens/login_screen.dart';
 import '../../utils/app_images.dart';
-import '../../utils/custom_route.dart';
 import '../../utils/appstyles.dart';
 
 class SplashScreen extends StatelessWidget {

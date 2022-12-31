@@ -1,14 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:food_app/services/f_auth.dart';
-import 'package:food_app/services/f_coupon.dart';
-import 'package:food_app/services/f_database.dart';
-import 'package:food_app/services/f_payment.dart';
-import 'package:food_app/services/show_all.dart';
 import 'package:provider/provider.dart';
 
 import 'features/onboarding/splash_screen.dart';
 import 'services/cart.dart';
+import 'services/f_auth.dart';
+import 'services/f_coupon.dart';
+import 'services/f_database.dart';
+import 'services/f_payment.dart';
+import 'services/show_all.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: ((context) => ShowAll())),
       ],
       child: MaterialApp(
-        title: 'Elliot kitchen',
+        title: 'Elliott kitchen',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
