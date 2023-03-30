@@ -7,7 +7,7 @@ extension ImageExtension on String {
 }
 
 class AppImages {
-  static String appLogo = 'app_logo'.jpeg;
+  static String appLogo = 'app_logo'.jpg;
   static String success = 'success'.png;
   static String error = 'error'.png;
 }

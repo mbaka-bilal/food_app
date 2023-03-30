@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     bigSpace,
                     Text(
-                      'Welcome back !',
+                      'Welcome',
                       style: TextStyles.semiBold(25, AppColors.black),
                     ),
                     smallSpace,

@@ -52,7 +52,7 @@ class SplashScreen extends StatelessWidget {
           //       colors: colorizeColors)
           // ]),
           Text(
-            'Student ID Number: 19058892',
+            'Nigerian FOODS',
             style: TextStyles.semiBold(20, AppColors.black),
           ),
         ],
